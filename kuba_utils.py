@@ -250,8 +250,8 @@ def main_menu_loop(api=None, valid_start_date=False):
             # Display menu
             print_menu()
             option = readchar.readkey()
-            #option = input(print("Make your selection: "))
             switch(api, option, startdate)
+            valid_start_date = False
         else:
             email, password = get_credentials()
             api = init_api(email, password)
